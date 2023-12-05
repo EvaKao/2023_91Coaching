@@ -14,79 +14,76 @@ public class Tests
     [Test]
     public void love_all()
     {
-        var score = _tennisGame.GetScore();
-        Assert.AreEqual("love all", score);
+        ShouldToBe("love all");
     }
     [Test]
     public void fifteen_love()
     {
         GivenFirstPlayerScoreTimes(1);
-        var score = _tennisGame.GetScore();
-        Assert.AreEqual("fifteen love", score);
+        ShouldToBe("fifteen love");
     }
 
     [Test]
     public void thirty_love()
     {
         GivenFirstPlayerScoreTimes(2);
-        var score = _tennisGame.GetScore();
-        Assert.AreEqual("thirty love", score);
+        ShouldToBe("thirty love");
     }
 
     [Test]
     public void forty_love()
     {
         GivenFirstPlayerScoreTimes(3);
-        var score = _tennisGame.GetScore();
-        Assert.AreEqual("forty love", score);
+        ShouldToBe("forty love");
     }
     [Test]
     public void love_fifteen()
     {
         GivenSecondPlayerScoreTimes(1);
-        var score = _tennisGame.GetScore();
-        Assert.AreEqual("love fifteen", score);
+        ShouldToBe("love fifteen");
     }
     [Test]
     public void duece()
     {
         GivenFirstPlayerScoreTimes(3);
         GivenSecondPlayerScoreTimes(3);
-        var score = _tennisGame.GetScore();
-        Assert.AreEqual("deuce", score);
+        ShouldToBe("deuce");
     }
     [Test]
     public void first_player_adv()
     {
         GivenFirstPlayerScoreTimes(4);
         GivenSecondPlayerScoreTimes(3);
-        var score = _tennisGame.GetScore();
-        Assert.AreEqual("Eva adv", score);
+        ShouldToBe("Eva adv");
     }
     [Test]
     public void second_player_adv()
     {
         GivenFirstPlayerScoreTimes(3);
         GivenSecondPlayerScoreTimes(4);
-        var score = _tennisGame.GetScore();
-        Assert.AreEqual("Eric adv", score);
+        ShouldToBe("Eric adv");
     }
     [Test]
     public void first_player_win()
     {
         GivenFirstPlayerScoreTimes(7);
         GivenSecondPlayerScoreTimes(5);
-        var score = _tennisGame.GetScore();
-        Assert.AreEqual("Eva win", score);
+        ShouldToBe("Eva win");
     }
     [Test]
     public void second_player_win()
     {
         GivenFirstPlayerScoreTimes(3);
         GivenSecondPlayerScoreTimes(5);
-        var score = _tennisGame.GetScore();
-        Assert.AreEqual("Eric win", score);
+        ShouldToBe("Eric win");
     }
+
+    private void ShouldToBe(string excepted)
+    {
+        var score = _tennisGame.GetScore();
+        Assert.AreEqual(excepted, score);
+    }
+
     private void GivenFirstPlayerScoreTimes(int times)
     {
         for (int i = 0; i < times; i++)
@@ -138,29 +135,27 @@ public class TennisGame
             {
                 if (Math.Abs(_firstPlayerScore - _secondPlayerScore) == 1)
                 {
-                    if (_firstPlayerScore > _secondPlayerScore)
-                    {
-                        return $"{_firstName} adv";
-                    }
-                    else
-                    {
-                        return $"{_secondName} adv";
-                    }
+                    return GetScoreResult("adv");
                 }
                 else
                 {
-                    if (_firstPlayerScore > _secondPlayerScore)
-                    {
-                        return $"{_firstName} win";
-                    }
-                    else
-                    {
-                        return $"{_secondName} win";
-                    }
+                    return GetScoreResult("win");
                 }
             }
 
             return $"{TennisScore[_firstPlayerScore]} {TennisScore[_secondPlayerScore]}";
+        }
+    }
+
+    private string GetScoreResult(string result)
+    {
+        if (_firstPlayerScore > _secondPlayerScore)
+        {
+            return $"{_firstName} {result}";
+        }
+        else
+        {
+            return $"{_secondName} {result}";
         }
     }
 
