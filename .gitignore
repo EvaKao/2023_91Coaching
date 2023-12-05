@@ -1,0 +1,17 @@
+bin/
+obj/
+/packages/
+riderModule.iml
+/_ReSharper.Caches/
+.idea/.idea.OneBackComboTrainingWeb/.idea/.gitignore
+.idea/.idea.OneBackComboTrainingWeb/.idea/.name
+.idea/.idea.OneBackComboTrainingWeb/.idea/encodings.xml
+.idea/.idea.OneBackComboTrainingWeb/.idea/indexLayout.xml
+.idea/.idea.OneBackComboTrainingWeb/.idea/vcs.xml
+.vs/OneBackComboTrainingWeb/DesignTimeBuild/.dtbcache.v2
+.vs/OneBackComboTrainingWeb/FileContentIndex/53d99249-0112-4dd0-ba05-63401c39ebbe.vsidx
+.vs/OneBackComboTrainingWeb/FileContentIndex/d0716622-0321-43b1-aa58-e4b6c04c9dfc.vsidx
+.vs/OneBackComboTrainingWeb/FileContentIndex/da26557b-0874-4578-982a-927afc410af4.vsidx
+.vs/OneBackComboTrainingWeb/FileContentIndex/f1d3868d-34f3-4fb2-b3a9-f9ca0f39d71d.vsidx
+.vs/OneBackComboTrainingWeb/FileContentIndex/read.lock
+.vs/OneBackComboTrainingWeb/v17/.suo

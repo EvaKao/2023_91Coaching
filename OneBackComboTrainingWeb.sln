@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneBackComboTrainingWeb", "OneBackComboTrainingWeb\OneBackComboTrainingWeb.csproj", "{7A1D984F-7AC0-4A87-B0DB-2D9A508CBE64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneBackTests", "OneBackTests\OneBackTests.csproj", "{52CFFF89-6584-4056-AFE3-4C4AA9124895}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A1D984F-7AC0-4A87-B0DB-2D9A508CBE64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A1D984F-7AC0-4A87-B0DB-2D9A508CBE64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A1D984F-7AC0-4A87-B0DB-2D9A508CBE64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A1D984F-7AC0-4A87-B0DB-2D9A508CBE64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52CFFF89-6584-4056-AFE3-4C4AA9124895}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52CFFF89-6584-4056-AFE3-4C4AA9124895}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52CFFF89-6584-4056-AFE3-4C4AA9124895}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52CFFF89-6584-4056-AFE3-4C4AA9124895}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
